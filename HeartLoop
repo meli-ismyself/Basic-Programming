@@ -1,0 +1,105 @@
+/* package whatever; // don't place package name! */
+//meliismyself
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Ideone
+{
+	static int i, j, n=6;
+	static int spaceJLength1=0, spaceJLength2=0,spaceJLength3=0, starJLength=0;
+	
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		for(int i=1; i<=3; i++){
+			TopHeart();
+			LoopHeartSecondRow();
+			System.out.println();
+		}
+		
+		 //LoopHeartBottom();
+	}
+	
+	public static void TopHeart(){
+		spaceJLength1 = 1;
+		spaceJLength2 = 3;
+		spaceJLength3 = 5;
+
+		starJLength = 3;
+		for(int x=1; x<=2; x++){
+			for(int y=1; y<=1; y++){
+				
+				LoopHeartFirstRow(spaceJLength1, spaceJLength2, spaceJLength3, starJLength);
+				spaceJLength1--;
+				spaceJLength2-=2;
+				spaceJLength3--;
+				starJLength +=2;
+			}
+			
+			System.out.println();
+		}
+	}
+	public static void LoopHeartFirstRow(int spaceJLength1, int spaceJLength2, int spaceJLength3, int starJLength){
+		
+		
+		for(i=1; i<=n; i++)
+   		{
+	        for(j=1; j<=spaceJLength1; j++)
+	        {
+	            System.out.print(" ");
+	        }
+	 
+	        for(j=1; j<=starJLength; j++)
+	        {
+	            System.out.print("*");
+	        }
+	 
+	        for(j=1; j<=spaceJLength2; j++)
+	        {
+	            System.out.print(" ");
+	        }
+	 
+	        for(j=1; j<=starJLength; j++)
+	        {
+	            System.out.print("*");
+	        }
+	        //batas
+	         for(j=1; j<=spaceJLength3; j++)
+	        {
+	            System.out.print(" ");
+	        }
+ 	   }
+
+	}
+	
+	public static void LoopHeartSecondRow(){
+		spaceJLength2 = 4;
+		int lengthJ=11;
+		int spaceJ=4;
+		int i;
+		for(i=1; i<=7; i++){
+			
+			if(i>2){
+				lengthJ-=2;
+				spaceJ+=2;
+				for(int j=1; j<=(i-2); j++){
+					System.out.print(" ");
+				}
+				
+			}else{
+				
+			}
+			for(int k=1; k<=6; k++){
+				for(int j=1; j<=lengthJ; j++){
+				System.out.print("*");
+				}
+				for (int j=1; j<=spaceJ; j++){
+					System.out.print(" ");
+				}
+			}
+			System.out.println();			
+		} 				
+	}	
+}
